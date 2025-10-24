@@ -67,6 +67,7 @@ export const AdvancedHomepage = () => {
                         <div class="hidden md:flex space-x-8 ml-10">
                             <a href="/for-advertisers" class="text-white hover:text-blue-400 transition-colors">For Advertisers</a>
                             <a href="/for-ai-platforms" class="text-white hover:text-blue-400 transition-colors">For AI Platforms</a>
+                            <a href="/ai-directory" class="text-white hover:text-blue-400 transition-colors">AI Directory</a>
                             <a href="/geo-report" class="text-white hover:text-blue-400 transition-colors">GEO Analytics</a>
                         </div>
                     </div>
@@ -436,10 +437,10 @@ export const AdvancedHomepage = () => {
 
                 <!-- View All Platforms Button -->
                 <div class="text-center">
-                    <button onclick="showAllPlatforms()" class="bg-white border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-600 hover:text-white transition-all">
+                    <a href="/ai-directory" class="inline-flex items-center bg-white border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-600 hover:text-white transition-all">
                         View All 247 Platforms
                         <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>

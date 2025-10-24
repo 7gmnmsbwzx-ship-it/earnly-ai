@@ -9,6 +9,7 @@ import { ForAdvertisersFixed } from './for-advertisers-fixed'
 import { ForAIPlatformsPage } from './for-ai-platforms-page'
 import { GeoReportPage } from './geo-report-page'
 import { SimpleWorkingPage } from './simple-working'
+import { aiPlatformsDirectoryPage } from './ai-platforms-directory'
 
 // Temporarily inline matching logic to avoid import issues
 
@@ -1219,6 +1220,11 @@ app.get('/for-ai-platforms', (c) => {
 // GEO Report Page
 app.get('/geo-report', (c) => {
   return c.html(GeoReportPage())
+})
+
+// AI Platforms Directory Page
+app.get('/ai-directory', (c) => {
+  return aiPlatformsDirectoryPage(c)
 })
 
 // Dashboard route for authenticated users
