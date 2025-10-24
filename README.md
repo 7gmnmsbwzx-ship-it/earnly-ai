@@ -269,15 +269,16 @@ curl -X POST http://localhost:3000/api/ai/query \
 
 ## 🌐 Deployment & URLs
 
-- **Development**: http://localhost:3002
-- **Sandbox**: https://3002-iym6gdsyrgvh7nix90lk8-c07dda5e.sandbox.novita.ai
+- **GitHub Repository**: https://github.com/7gmnmsbwzx-ship-it/earnly-ai
+- **Development**: http://localhost:3000
+- **Sandbox**: https://3000-iym6gdsyrgvh7nix90lk8-cbeee0f9.sandbox.novita.ai
 - **Production**: (To be deployed to Cloudflare Pages)
 
 ### Key Pages
-- **Homepage**: https://3002-iym6gdsyrgvh7nix90lk8-c07dda5e.sandbox.novita.ai/
-- **For Advertisers**: https://3002-iym6gdsyrgvh7nix90lk8-c07dda5e.sandbox.novita.ai/for-advertisers
-- **For AI Platforms**: https://3002-iym6gdsyrgvh7nix90lk8-c07dda5e.sandbox.novita.ai/for-ai-platforms
-- **Dashboard**: https://3002-iym6gdsyrgvh7nix90lk8-c07dda5e.sandbox.novita.ai/dashboard
+- **Homepage**: https://3000-iym6gdsyrgvh7nix90lk8-cbeee0f9.sandbox.novita.ai/
+- **For Advertisers**: https://3000-iym6gdsyrgvh7nix90lk8-cbeee0f9.sandbox.novita.ai/for-advertisers
+- **For AI Platforms** (Revenue Calculator): https://3000-iym6gdsyrgvh7nix90lk8-cbeee0f9.sandbox.novita.ai/for-ai-platforms
+- **Dashboard**: https://3000-iym6gdsyrgvh7nix90lk8-cbeee0f9.sandbox.novita.ai/dashboard
 
 ### Tech Stack
 - **Backend**: Hono Framework + TypeScript
