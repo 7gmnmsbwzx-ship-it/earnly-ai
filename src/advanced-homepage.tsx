@@ -83,7 +83,7 @@ export const AdvancedHomepage = () => {
                             <span class="text-gray-400">conversations</span>
                         </div>
                         
-                        <a href="/for-advertisers" class="btn-interactive bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:scale-105 transition-transform">
+                        <a href="/get-started" class="btn-interactive bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:scale-105 transition-transform">
                             Get Started
                         </a>
                     </div>

@@ -10,6 +10,7 @@ import { ForAIPlatformsPage } from './for-ai-platforms-page'
 import { GeoReportPage } from './geo-report-page'
 import { SimpleWorkingPage } from './simple-working'
 import { aiPlatformsDirectoryPage } from './ai-platforms-directory'
+import { getStartedPage } from './get-started-page'
 
 // Temporarily inline matching logic to avoid import issues
 
@@ -1225,6 +1226,11 @@ app.get('/geo-report', (c) => {
 // AI Platforms Directory Page
 app.get('/ai-directory', (c) => {
   return aiPlatformsDirectoryPage(c)
+})
+
+// Get Started Page - Superior to AdMesh
+app.get('/get-started', (c) => {
+  return getStartedPage(c)
 })
 
 // Dashboard route for authenticated users
