@@ -42,26 +42,48 @@ class GetStartedManager {
         const advertiserBtn = document.getElementById('advertiser-btn');
         const platformBtn = document.getElementById('platform-btn');
         const companyLabel = document.getElementById('company-label');
+        const companyInput = document.getElementById('company-input');
 
-        // Reset button styles
-        [advertiserBtn, platformBtn].forEach(btn => {
-            btn.className = 'account-type-btn p-4 rounded-xl border-2 border-gray-200 hover:border-blue-500 transition-all text-left group';
+        // Reset button styles - base classes
+        const baseClasses = 'account-type-btn w-full p-6 rounded-xl border-2 transition-all text-left group';
+        const unselectedClasses = baseClasses + ' border-gray-200 hover:border-blue-500';
+        const selectedClasses = baseClasses + ' border-blue-500 bg-blue-50 selected';
+
+        advertiserBtn.className = unselectedClasses;
+        platformBtn.className = unselectedClasses;
+
+        // Update selected button
+        const selectedBtn = type === 'advertiser' ? advertiserBtn : platformBtn;
+        selectedBtn.className = selectedClasses;
+
+        // Update icons for selection state
+        const allIcons = document.querySelectorAll('.account-type-btn .fas.fa-check-circle, .account-type-btn .fas.fa-chevron-right');
+        allIcons.forEach(icon => {
+            if (icon.classList.contains('fa-check-circle')) {
+                icon.className = 'fas fa-chevron-right';
+            }
         });
 
-        // Highlight selected button
-        const selectedBtn = type === 'advertiser' ? advertiserBtn : platformBtn;
-        selectedBtn.className = 'account-type-btn p-4 rounded-xl border-2 border-blue-500 bg-blue-50 text-left group';
-
-        // Update form labels based on account type
-        if (type === 'advertiser') {
-            companyLabel.textContent = 'Company Name';
-            document.querySelector('input[name="company"]').placeholder = 'Your company name';
-        } else {
-            companyLabel.textContent = 'AI Platform Name';
-            document.querySelector('input[name="company"]').placeholder = 'Your AI platform name';
+        // Add check icon to selected
+        const selectedIcon = selectedBtn.querySelector('.fa-chevron-right');
+        if (selectedIcon) {
+            selectedIcon.className = 'fas fa-check-circle text-blue-500';
         }
 
-        // Add success animation
+        // Update form labels and placeholders based on account type
+        if (type === 'advertiser') {
+            companyLabel.textContent = 'Company Name';
+            if (companyInput) {
+                companyInput.placeholder = 'Your company name';
+            }
+        } else {
+            companyLabel.textContent = 'AI Platform Name';
+            if (companyInput) {
+                companyInput.placeholder = 'Your AI platform name';
+            }
+        }
+
+        // Add visual feedback
         this.animateSelection(selectedBtn);
     }
 
