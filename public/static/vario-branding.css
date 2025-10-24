@@ -1,0 +1,217 @@
+/* Vario™ AI Search Engine Branding Styles */
+
+.vario-brand {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.vario-logo {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+}
+
+.vario-card {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 50%, rgba(6, 182, 212, 0.05) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.vario-button {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vario-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+}
+
+/* AI Processing Animation */
+@keyframes ai-pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+.ai-processing {
+    animation: ai-pulse 2s infinite;
+}
+
+/* Smart Recommendation Styles */
+.smart-rec-badge {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.relevance-meter {
+    background: linear-gradient(90deg, #ef4444 0%, #f59e0b 30%, #10b981 60%, #059669 100%);
+    height: 4px;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.relevance-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    width: 2px;
+    border-radius: 1px;
+    transition: left 0.3s ease;
+}
+
+/* Ad Format Preview Styles */
+.format-preview {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.format-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s ease;
+}
+
+.format-preview:hover::before {
+    left: 100%;
+}
+
+/* Platform Category Icons */
+.platform-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+}
+
+.platform-search { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); }
+.platform-chatgpt { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+.platform-shopping { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+.platform-productivity { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
+.platform-creative { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); }
+.platform-business { background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%); }
+
+/* Enhanced Form Styles */
+.enhanced-input {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.enhanced-input:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+}
+
+.enhanced-select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+/* Loading States */
+.loading-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Results Animation */
+.result-card {
+    animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Interactive Elements */
+.interactive-demo {
+    position: relative;
+    cursor: pointer;
+}
+
+.interactive-demo::after {
+    content: '↗';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: rgba(59, 130, 246, 0.6);
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.interactive-demo:hover::after {
+    opacity: 1;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .vario-brand {
+        font-size: 1.2rem;
+    }
+    
+    .format-preview {
+        margin-bottom: 12px;
+    }
+    
+    .platform-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .vario-card {
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(6, 182, 212, 0.1) 100%);
+        border-color: rgba(59, 130, 246, 0.3);
+    }
+    
+    .loading-shimmer {
+        background: linear-gradient(90deg, #2a2a2a 25%, #1a1a1a 50%, #2a2a2a 75%);
+    }
+}
